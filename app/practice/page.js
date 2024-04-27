@@ -4,8 +4,14 @@ import MoveButton from '../components/MoveButton';
 
 
 export default async function Practice() {  
-  const data = await getAllWords();
-
+  let data = await getAllWords();
+  let move = true;
+  let i = 0;
+  while (move){
+    data = data[i]
+    i++
+    move = false
+  }
 
   return (
     <main>
@@ -28,7 +34,7 @@ export default async function Practice() {
           <h1>{data.first_language}</h1>
           <h1>{data.second_language}</h1>
           <h1>{data.difficulty}</h1>
-          <MoveButton data={data}/>
+          <MoveButton boolean={move}/>
       </div>
       
     </main>
