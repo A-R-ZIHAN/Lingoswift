@@ -16,7 +16,8 @@ export default function Home() {
   const data = {
     "first_language": first_language,
     "second_language": second_language,
-    "difficulty": difficulty
+    "difficulty": difficulty,
+    "improvement":0
   };
 
   const create = async ()=>{
