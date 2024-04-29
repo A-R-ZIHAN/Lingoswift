@@ -24,7 +24,11 @@ export default async function Practice() {
   let selectedWords = []
   
     random_number.map(number=>{
-      selectedWords.push(data[number])
+      
+      if(data[number].improvement < 5){
+        
+        selectedWords.push(data[number])
+      }
     })
   
   console.log(selectedWords)
@@ -33,8 +37,8 @@ export default async function Practice() {
     <main>
       
       <div >
-      
-          <MoveButton data={data}/>
+       {<MoveButton data={data}/>}
+          
       </div>
       
     </main>
