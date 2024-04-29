@@ -37,7 +37,7 @@ export default async function Practice() {
     <main>
       
       <div >
-       {<MoveButton data={data}/>}
+       {<MoveButton data={data} number={random_number}/>}
           
       </div>
       
