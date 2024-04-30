@@ -2,6 +2,11 @@ import React from 'react'
 import getAllWords from '@/lib/getAllWords';
 import MoveButton from '../components/MoveButton';
 
+
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 function myRandomInts(quantity, max){
   const set = new Set()
   while(set.size < quantity) {
@@ -37,7 +42,7 @@ export default async function Practice() {
     <main>
       
       <div >
-       {<MoveButton data={data} number={random_number}/>}
+       {<MoveButton data={selectedWords} number={random_number}/>}
           
       </div>
       
